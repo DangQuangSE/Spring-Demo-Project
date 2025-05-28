@@ -1,0 +1,80 @@
+/* ==== MÀN HÌNH CHÍNH ==== */
+.register-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* căn giữa theo chiều dọc */
+  align-items: center; /* căn giữa theo chiều ngang */
+}
+
+.register-box {
+  max-width: 600px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 3rem 3rem; /* giảm từ 2.5rem 3rem */
+  transition: all 0.3s ease;
+  padding-top: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* ==== LOGO VÀ BRAND NAME ==== */
+/* Logo + Header gọn hơn */
+.register-header-top {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.brand-logo {
+  width: 48px;
+  height: auto;
+  margin-bottom: 0.75rem;
+}
+
+.register-header-top h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.register-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+/* ==== FORM ==== */
+.register-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ==== INPUTS ==== */
+.ant-input,
+.ant-picker,
+.ant-select-selector {
+  border-radius: 8px !important;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* ==== TEXT LINK ==== */
+
+.register-header-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ant-form-item {
+  margin-bottom: 14px; /* mặc định là 24px */
+}
+.register-box {
+  padding: 1.5rem 3rem; /* Trước là 2rem 2.5rem */
+}
+.register-header-top {
+  margin-bottom: 1rem;
+}
+.gradient-button {
+  padding: 10px 14px; /* Trước là 12px */
+}
