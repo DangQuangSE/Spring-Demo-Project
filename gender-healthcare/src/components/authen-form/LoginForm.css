@@ -4,7 +4,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(145deg, #e4ecf7, #f0f2f5); /* Nền gradient nhẹ */
+  /* background: linear-gradient(145deg, #e4ecf7, #f0f2f5); Nền gradient nhẹ */
+  background: linear-gradient(to bottom right, #ffd4e2, #e2e8fe);
   font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
@@ -84,3 +85,26 @@
   object-fit: contain;
 }
 /* Đổi viền đỏ mặc định thành viền mềm hơn hoặc bỏ viền */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 12px;
+  cursor: pointer;
+  min-width: 140px;
+}
+
+.google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}

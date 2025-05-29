@@ -13,23 +13,26 @@ import GradientButton from "../common/GradientButton";
 import "./RegisterForm.css";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
-
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
 const { Option } = Select;
 
 const RegisterForm = () => {
   const [form] = Form.useForm();
 
-  const onFinish = async (values) => {
-    try {
-      // Gửi dữ liệu đến API
-      await axios.post("http://localhost:8080/api/auth/register", values);
-      message.success("Đăng ký thành công!");
-      Navigate("/login"); // chuyển hướng sang trang đăng nhập
-    } catch (error) {
-      message.error("Đăng ký thất bại. Vui lòng thử lại!");
-    }
+  // const onFinish = async (values) => {
+  //   try {
+  //     // Gửi dữ liệu đến API
+  //     await axios.post("http://localhost:8080/api/auth/register", values);
+  //     message.success("Đăng ký thành công!");
+  //     Navigate("/login"); // chuyển hướng sang trang đăng nhập
+  //   } catch (error) {
+  //     message.error("Đăng ký thất bại. Vui lòng thử lại!");
+  //   }
+  // };
+  const onFinish = (values) => {
+    console.log("Success:", values);
   };
-
   return (
     <div className="register-screen">
       <div className="register-container">
@@ -174,18 +177,28 @@ const RegisterForm = () => {
               </Checkbox>
             </Form.Item>
 
-            <Form.Item name="subscribe" valuePropName="checked">
+            {/* <Form.Item name="subscribe" valuePropName="checked">
               <Checkbox>
                 Subscribe to health tips and updates (optional)
               </Checkbox>
-            </Form.Item>
+            </Form.Item> */}
 
             <Form.Item>
               <GradientButton block htmlType="submit">
                 Create Account
               </GradientButton>
             </Form.Item>
-
+            <div className="auth-divider">— OR —</div>
+            <div className="social-buttons">
+              <button className="social-button google">
+                <FcGoogle style={{ marginRight: "8px", fontSize: "25px" }} />
+                Sign up with Google
+              </button>
+              {/* <button className="social-button facebook">
+                        <FaFacebook style={{ marginRight: "8px", fontSize: "25px" }} />
+                        Sign up with Facebook
+                      </button> */}
+            </div>
             <div className="register-footer">
               Already have an account?{" "}
               <a href="/login" style={{ color: "#ff5a7d" }}>
