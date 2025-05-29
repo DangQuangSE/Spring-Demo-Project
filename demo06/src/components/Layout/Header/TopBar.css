@@ -1,0 +1,113 @@
+/* ===== TOP BAR STYLES ===== */
+.top-bar {
+  background: var(--gradient-primary);
+  color: var(--text-white);
+  padding: var(--spacing-xs) 0;
+  font-size: 14px;
+  transition: all var(--transition-normal);
+}
+
+.top-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== TOP BAR SECTIONS ===== */
+.top-bar-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bar-section:first-child {
+  justify-content: flex-start;
+}
+
+.top-bar-section:last-child {
+  justify-content: flex-end;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.contact-item .icon {
+  font-size: 12px;
+}
+
+/* ===== LANGUAGE SELECTOR ===== */
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.lang-option {
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.lang-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.lang-option.active {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.lang-divider {
+  opacity: 0.5;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 992px) {
+  .top-bar-section:nth-child(3) {
+    display: none;
+  }
+
+  .top-bar-section {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar-section:nth-child(2) {
+    display: none;
+  }
+
+  .top-bar-container {
+    justify-content: space-between;
+  }
+
+  .top-bar-section:first-child,
+  .top-bar-section:last-child {
+    flex: initial;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-bar-container {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) 0;
+  }
+
+  .top-bar-section {
+    justify-content: center;
+  }
+
+  .top-bar-section:first-child {
+    order: 1;
+  }
+
+  .top-bar-section:last-child {
+    order: 2;
+  }
+}
