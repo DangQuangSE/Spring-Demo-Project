@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circle background -->
+  <circle cx="100" cy="100" r="90" fill="#4F46E5"/>
+  
+  <!-- Heart shape -->
+  <path d="M100 140C100 140 140 110 140 80C140 60 120 50 100 50C80 50 60 60 60 80C60 110 100 140 100 140Z" fill="white"/>
+  
+  <!-- Plus symbol -->
+  <rect x="90" y="70" width="20" height="40" fill="#4F46E5"/>
+  <rect x="70" y="90" width="40" height="20" fill="#4F46E5"/>
+</svg> 
